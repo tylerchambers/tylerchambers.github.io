@@ -1,11 +1,17 @@
 body {
     font-family: sans-serif;
+    background-color: #000000;
 }
   
 h1 {
     color: white;
     font-size: 600%;
     text-align: center;
+}
+
+h2 {
+  color: white;
+  padding-top: 64px;
 }
 
 .links {
