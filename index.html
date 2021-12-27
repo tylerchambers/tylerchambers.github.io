@@ -1,22 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-    <title>TYLERCHAMBERS.NET</title>
-    <script src="app.js"></script>
-</head>
-<body>
-    <div class="prettycolors">
-        <h1>TYLERCHAMBERS.NET</h1>
-        <div class="links">
-            <a href="https://github.com/tylerchambers" class="button">GITHUB</a>
-            <a href="https://keys.openpgp.org/search?q=hello%40tylerchambers.net" class="button">PGP</a>
-            <a href="mailto:hello@tylerchambers.net" class="button">EMAIL</a>
-        </div>
-    </div>
-</body>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="shortcut icon" type="image/png" href="favicon.png" />
+		<title>tylerchambers.net</title>
+		<style type="text/css">
+			body {
+				margin: 40px auto;
+				max-width: 650px;
+				line-height: 1.6;
+				font-size: 18px;
+				color: #444;
+				padding: 0 10px;
+			}
+			h1,
+			h2,
+			h3 {
+				line-height: 1.2;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Tyler Chambers</h1>
+			<aside>Developer, Crypto Enthusiast, Friend.</aside>
+		</header>
+		<h2>About</h2>
+		<p>
+			I'm a software engineer currently residing in the Louisville, KY
+			area. I'm an Ex-Google engineer currently employed as an SRE for a
+			local Fortune 500 company. I enjoy building reliable, distributed
+			systems and accompanying tooling that allow others to interact with
+			them in a productive way.
+		</p>
+		<h3>Interests</h3>
+		<ul>
+			<li>Bitcoin & Bitcoin L2s (lightning).</li>
+			<li>Smart contract platforms.</li>
+			<li>Distributed computing.</li>
+			<li>Linux and Unix internals.</li>
+			<li>Reliability.</li>
+		</ul>
+		<h3>Technologies</h3>
+		<aside>
+			Pieces of tech stacks I've worked with. Bold indicates preference.
+			Not a definitive list. I'm not married to one stack over another.
+		</aside>
+		<ul>
+			<li><b>Javascript / Typescript.</b></li>
+			<li><b>Go.</b></li>
+			<li><b>Rust.</b></li>
+			<li>Linux & Unix.</li>
+			<li>Python 3, C++, Shell (Bash), HTML, CSS.</li>
+			<li>Postgres, Redis.</li>
+		</ul>
+		<h2>Code</h2>
+		<aside>Some things that I've built, that I enjoy.</aside>
+		<h3>FOSS Contributions</h3>
+		<em><a href="https://github.com/bitcoin/bitcoin">Bitcoin Core</a></em>
+		<ul>
+			<li>
+				<a href="https://github.com/bitcoin/bitcoin/pull/20346"
+					>PR #20346</a
+				>
+				- Modified security-check.py to use <code>==</code> instead of
+				<code>is</code> for literal comparison in line with a new
+				standard in Python 3.8.
+			</li>
+			<li>
+				<a href="https://github.com/bitcoin/bitcoin/pull/20468"
+					>PR #20468</a
+				>
+				- Standardized <code>--version</code> flag behavior between CLI
+				utilities and added functionality in
+				<code>gen-manpages.sh</code> to error when attempting to
+				generate man pages for binaries built from a dirty branch.
+			</li>
+			<li>
+				<a href="https://github.com/bitcoin/bitcoin/pull/22591"
+					>PR #22591</a
+				>
+				- Updated bitcoin-qt client to present an error if
+				<code>settings.json</code> exists but is not readable (incorrect
+				permissions), instead of overwriting.
+			</li>
+		</ul>
+		<h3>Personal</h3>
+		<ul>
+			<li>
+				<a href="https://github.com/tylerchambers/electrum-client"
+					>Electrum Client</a
+				>
+				- An
+				<a href="https://en.bitcoin.it/wiki/Electrum">electrum</a>
+				client library written in Python focused on simplicity and
+				usability.
+			</li>
+			<li>
+				<a href="https://github.com/tylerchambers/aptlib">AptLib</a> - A
+				Go library for interacting with APT repositories. Unfinished.
+				Currently able to parse <code>sources.list</code> files and
+				download + parse package indicies. Can currently out perform the
+				main apt implementation included in debian and ubuntu, as it
+				downloads and parses sources concurrently. More gains could be
+				made by making use of Cache-Control, ETag, and Last-Modified
+				headers. I paused work on this as I became busy at my main job,
+				and frustrated with the breadth of APT's functionality. If I
+				were to resume this sort of work it would be re-done in Rust to
+				take advantage of its fast regex, and limit focus to only
+				handling HTTP/HTTPS repositories (most common). It would likely
+				also be useful to have an apt daemon running in the background
+				to keep your sources fresh (autoupdate?), and a CLI to interact
+				with it.
+			</li>
+			<li>
+				<a href="https://github.com/tylerchambers/bitcoin-rest"
+					>Bitcoin REST</a
+				>
+				- A REST API gateway that passes Bitcoin Core RPC calls to a
+				running Bitcoin Core instance and returns its response.
+			</li>
+		</ul>
+		<h2>Contact</h2>
+		If you would like to know more about me, get a copy of my "official"
+		resume, or just chat about bitcoin I can be reached via email at: me
+		(at) tylerchambers (dot) net
+	</body>
 </html>
